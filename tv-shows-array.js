@@ -61,7 +61,7 @@ console.log(netflixExclusives);
 
 tvShows.sort();
 //11. Change of plans - sort in REVERSE alphabetical order and log the array again!
-
+tvShows.reverse();
 //12. After watching Teen Wolf you become interested in actor Jason Bateman's work. Add "Arrested Development" and  "Ozark" to the array and log the array again.
 tvShows.push('Arrested Development', 'Ozark');
 console.log(tvShows)
