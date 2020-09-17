@@ -1,0 +1,21 @@
+//create a function that asks for guess from user
+// alert gives a hint if the number has to be lower/higher
+
+let secretNumber = 5;
+let guess;
+guesser();
+
+function guesser() {
+    guess = prompt("guess the number");
+    let guessNumber = Number(guess);
+    if (guessNumber === secretNumber) {
+        alert("Yay, you are rigth!");
+        return;
+    } else {
+        let message =
+            guessNumber < secretNumber ? "we need higher" : "we need lower";
+
+        confirm("wrong " + message);
+        guesser();
+    }
+}
