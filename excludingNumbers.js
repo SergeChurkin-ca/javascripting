@@ -11,3 +11,4 @@ for (let e = 0; e <= 20; e++) {
     let num = generateRandom(min, max);
     console.log(num);
 }
+
