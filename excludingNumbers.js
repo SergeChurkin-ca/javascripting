@@ -1,3 +1,4 @@
+// generate a list of random numbers which doesn't contain given array of excluded numbers
 const excludeNUmbers = [1, 18, 12, 20, 2, 3];
 
 function generateRandom(min, max) {
