@@ -1,0 +1,14 @@
+// record number of how many times page was refreshed
+
+if (localStorage.getItem("num")) {
+    let count = localStorage.getItem("num");
+    count = Number(count);
+    count++;
+    localStorage.setItem("num", count);
+} else {
+    localStorage.setItem("num", 1);
+}
+
+console.log(localStorage.getItem("num"));
+document.getElementById("demo").innerHTML =
+    localStorage.getItem("num") + " hits";
