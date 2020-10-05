@@ -1,0 +1,5 @@
+// this is how we define tomorrow's date - instead of adding day we add actual hours*min*seconds*miliseconds because of teh calendar
+
+let days = 1;
+const newDate = new Date(Date.now() + days * 24 * 60 * 60 * 1000);
+console.log(newDate.toDateString());
