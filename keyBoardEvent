@@ -1,0 +1,37 @@
+// keydown event moves div around the screen
+
+let player = {
+    speed: 100,
+    x: 0,
+    y: 0,
+};
+window.addEventListener("DOMContentLoaded", build);
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowUp") {
+        player.x -= 50;
+    }
+    if (e.key === "ArrowDown") {
+        player.x += 50;
+    }
+    if (e.key === "ArrowLeft") {
+        player.y -= 50;
+    }
+    if (e.key === "ArrowRight") {
+        player.y += 50;
+    }
+    player.el.style.top = player.x + "px";
+    player.el.style.left = player.y + "px";
+    console.log(player.x);
+});
+
+function build() {
+    player.el = document.createElement("div");
+    (player.x = 100), (player.y = 100);
+    player.el.style =
+        "position: absolute; width: 100px;height: 100px; background: darkslategrey";
+    player.el.style.top = player.x + "px";
+    player.el.style.left = player.y + "px";
+
+    document.body.appendChild(player.el);
+}
