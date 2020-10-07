@@ -1,0 +1,8 @@
+// get paramaters of element's position on page
+
+const elem = document.querySelector("div");
+
+elem.style =
+    "width: 200px; height: 200px; background: coral; position: absolute; top: 0; left: 0";
+
+console.log(elem.getBoundingClientRect());
