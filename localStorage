@@ -1,14 +1,21 @@
 // record number of how many times page was refreshed
+// reset count onclick event
 
-if (localStorage.getItem("num")) {
-    let count = localStorage.getItem("num");
-    count = Number(count);
+if (localStorage.getItem("myItem")) {
+    let count = localStorage.getItem("myItem");
+    count = ("myItem", count);
     count++;
-    localStorage.setItem("num", count);
+    localStorage.setItem("myItem", count);
 } else {
-    localStorage.setItem("num", 1);
+    localStorage.setItem("myItem", 1);
 }
 
-console.log(localStorage.getItem("num"));
+console.log(localStorage.getItem("myItem"));
+
 document.getElementById("demo").innerHTML =
-    localStorage.getItem("num") + " hits";
+    localStorage.getItem("myItem") + " hits";
+
+function reset() {
+    localStorage.clear();
+    document.getElementById("demo").innerHTML = "";
+}
