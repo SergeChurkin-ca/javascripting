@@ -1,6 +1,6 @@
 // cirle moves on timer
 // countdown timer display
-// timerclears on 0 and triggers ricle change
+// timer clears on 0 and triggers circle change
 
 const elem = document.querySelector("div");
 elem.style =
