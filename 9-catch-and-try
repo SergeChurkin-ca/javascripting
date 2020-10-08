@@ -23,6 +23,7 @@ function tester() {
         document.getElementById("demo").innerHTML = "error, check you input";
     } finally {
         console.log("this will always run");
+         inputNumber.value = "";
     }
 }
 console.log(el);
