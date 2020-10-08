@@ -1,0 +1,28 @@
+//
+
+const el = document.createElement("input");
+
+el.setAttribute("type", "text");
+el.setAttribute("value", "10");
+document.body.appendChild(el);
+
+const btn = document.querySelector("button");
+btn.addEventListener("click", tester);
+
+function tester() {
+    let num = el.value;
+    document.getElementById("demo").innerHTML = num;
+    try {
+        if (num === "") throw "No Value";
+        if (isNaN(num)) throw "not a number";
+        num = Number(num);
+        if (num > 100) throw "To high";
+        if (num < 0) throw "has to be more than 0 ";
+    } catch (error) {
+        console.error(error);
+        document.getElementById("demo").innerHTML = "error, check you input";
+    } finally {
+        console.log("this will always run");
+    }
+}
+console.log(el);
