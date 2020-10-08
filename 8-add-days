@@ -1,0 +1,7 @@
+// create prototype to add days to current date
+
+Date.prototype.addDays = function(days) {
+    return new Date(this.valueOf() + days * 864e5);
+};
+
+console.log(new Date().addDays(7));
