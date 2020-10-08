@@ -1,8 +1,11 @@
 // extract email adresses from given string usegin regex
-let myStr =
-    "Hello world javascript 123 this works gibrish sample@email.com I love that, contact me example@example.com";
 
-let newStr = /[a-z]+[@]+[a-z]+[.]\w+/g;
+let myStr =
+    "Hello world javascript 123 this works gibrish sample@email.com I love that, contact me example123@example.com. Abracadabrad sjhfgsdjfg sergechurki@yahoo123.com";
+
+let newStr = /[a-z0-9]+[@]+[a-z0-9]+[.]\w+/g;
 
 let emailData = myStr.match(newStr);
-console.log(emailData);
+for (let i = 0; i < emailData.length; i++) {
+    console.log(emailData[i]);
+}
