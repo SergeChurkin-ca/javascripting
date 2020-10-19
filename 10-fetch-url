@@ -1,8 +1,7 @@
 // fetch url, output img placeholder and random user info on te page
 const url = "https://randomuser.me/api";
 const btn = document.querySelector('button');
-const inputElement = document.createElement('input')
-inputElement.setAttribute('type', 'text');
+
 btn.addEventListener('click', getUser);
 
 function getUser() {
