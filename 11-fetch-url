@@ -1,0 +1,33 @@
+// adding elements from api dynamically
+// define the number of active output added to page
+
+const url = "https://randomuser.me/api";
+const btn = document.querySelector('button');
+const inputElement = document.createElement('input');
+const output = document.getElementById('demo')
+
+inputElement.setAttribute('type', 'number');
+inputElement.setAttribute('value', 5)
+btn.addEventListener('click', getUser);
+document.body.appendChild(inputElement);
+
+function getUser() {
+    let tempUrl = url + '?results=' + inputElement.value;
+    fetch(tempUrl)
+
+    .then(function(res) {
+            return res.json()
+        })
+        .then(function(data) {
+            let html;
+            console.log(data)
+
+            for (let i = 1; i < data.results.length; i++) {
+                let myImg = data.results[i].picture.medium;
+                html += data.results[i].name.first + " " + data.results[i].name.last + '<br>' + `<img src=${myImg}>` + '<br>' + data.results[i].email + '<hr>';
+            }
+            output.innerHTML = html;
+        })
+
+
+}
