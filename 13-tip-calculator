@@ -1,0 +1,38 @@
+// tip calculator
+// input options added dynamically
+
+const btn = document.querySelector('button')
+    // let output = document.getElementById('demo');
+var values = ["10", "15", "20", "25"];
+
+var select = document.createElement("select");
+
+for (const val of values) {
+    var option = document.createElement("option");
+    option.value = val;
+    option.text = val.charAt(0).toUpperCase() + val.slice(1);
+    select.appendChild(option);
+
+}
+
+var label = document.createElement("label");
+label.innerHTML = "Choose your service: "
+label.htmlFor = "service";
+
+document.getElementById("demo").appendChild(label).appendChild(select);
+
+btn.addEventListener('click', process);
+
+function process() {
+    let serviceSelect = document.querySelector('select').value;
+    console.log(serviceSelect);
+    let bill = document.querySelector('input').value;
+    let tip = bill * serviceSelect / 100
+
+    console.log(bill);
+
+    document.getElementById('bill').value = ''
+    document.getElementById('demo').innerHTML = `your bill is $ ${bill} and  tip ${serviceSelect}%, tip is which $ ${tip}`
+
+
+}
