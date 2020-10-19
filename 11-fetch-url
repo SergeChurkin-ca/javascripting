@@ -28,6 +28,4 @@ function getUser() {
             }
             output.innerHTML = html;
         })
-
-
 }
