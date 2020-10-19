@@ -1,4 +1,4 @@
-//
+// guess the number
 
 const el = document.createElement("input");
 
