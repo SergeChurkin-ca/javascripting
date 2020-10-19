@@ -1,0 +1,30 @@
+// output todo list form api 
+// change color of completed tasks
+// define the number ouf outputsform userinput added one time dynamically
+
+const output = document.getElementById('demo');
+const btn = document.querySelector('button')
+const url = 'http://jsonplaceholder.typicode.com/todos'
+    //determine how many inputs added dynamically at one time
+const userInput = document.createElement('input');
+userInput.setAttribute('type', 'text');
+userInput.setAttribute('value', 5)
+document.body.appendChild(userInput)
+
+btn.addEventListener('click', process);
+
+function process() {
+    fetch(url)
+
+    .then(res => res.json())
+
+    .then(data => {
+
+        for (let i = 1; i <= userInput.value; i++) {
+            let html = document.createElement('html');
+            html.style.color = data[i].completed ? "green" : "red"
+            html.innerHTML = [i] + '.' + data[i].title + '<br>';
+            output.appendChild(html);
+        }
+    })
+}
