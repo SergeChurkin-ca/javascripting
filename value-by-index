@@ -1,0 +1,14 @@
+// get the name of month by its index
+
+const months = ["January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"
+];
+
+function monthName(num) {
+    for (let i = 0; i < months.length; i++) {
+        let newArr = months[num - 1];
+        return newArr;
+    }
+}
+
+console.log(monthName(12))
