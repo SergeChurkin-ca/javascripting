@@ -1,0 +1,13 @@
+// merge splitted chunks of array like this:
+// convertCartesian([1, 5, 3, 3, 4], [5, 8, 9, 1, 0])
+// ➞ [[1, 5], [5, 8], [3, 9], [3, 1], [4, 0]]
+
+function convertCartesian(x, y) {
+    let mergedArray = []
+    for (let i = 0; i < x.length; i++) {
+        mergedArray.push(x.slice(i, i + 1).concat(y.slice(i, i + 1)))
+    }
+    return mergedArray;
+}
+
+console.log(convertCartesian([1, 5, 3, 3, 4], [5, 8, 9, 1, 0]))
