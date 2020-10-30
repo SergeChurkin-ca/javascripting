@@ -1,0 +1,16 @@
+// insert letter a given number of times
+// eg Edaabit if num === 2; 
+
+
+let myArray = 'Edabit'
+
+function howManyTimes(num) {
+    let newArr = []
+    newArr.push(myArray.slice(0, 2))
+    for (let index = 0; index < num; index++) {
+        newArr += 'a'
+    }
+    return newArr + 'bit'
+}
+
+console.log(howManyTimes(2))
