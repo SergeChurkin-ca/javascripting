@@ -28,10 +28,10 @@ let tipPercentage = [0.10, 0.20, 0.30];
 
 for (let i = 0; i <= 3; i++) {
     button[i].addEventListener('click', function() {
-        demo.innerText = "tip is $" + sum * tipPercentage[i]
+        let tip = (sum * tipPercentage[i]).toFixed(2);
+        demo.innerText = `tip is $ ${tip}`
     })
 }
-
 </script>
 
 </html>
