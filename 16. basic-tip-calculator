@@ -19,6 +19,8 @@
 </body>
 <script>
 
+// queryselector All enables selection of all button which we will itterate through
+
 let button = document.querySelectorAll("button");
 let sum = document.querySelector("input").value
 let tipPercentage = [0.10, 0.20, 0.30];
