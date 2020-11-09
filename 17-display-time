@@ -1,0 +1,8 @@
+let button = document.querySelector("button");
+let d = new Date()
+
+button.addEventListener('click', function() {
+    let h = d.getHours();
+    let m = (d.getMinutes() < 10 ? '0' : '') + d.getMinutes()
+    document.getElementById('demo').innerText = `local time is ${h}:${m}`
+})
