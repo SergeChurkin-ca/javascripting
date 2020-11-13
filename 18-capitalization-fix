@@ -1,0 +1,7 @@
+// capitalize every first letter in string and lower case the rest
+
+function titleCase(str) {
+    return str.split(' ').map(word => word[0].toUpperCase() + word.slice(1).toLowerCase()).join(' ')
+}
+
+console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"));
