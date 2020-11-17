@@ -1,0 +1,8 @@
+// Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'.
+// findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8
+
+function findElement(array, func) {
+    return array.find(func)
+}
+
+console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
