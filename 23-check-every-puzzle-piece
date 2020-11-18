@@ -1,0 +1,10 @@
+// puzzlePieces([1, 8, 5, 0, -1, 7], [0, -7, -4, 1, 2, -6]) ➞ true
+// puzzlePieces([1, 2], [-1, -1]) ➞ false
+// puzzlePieces([9, 8, 7], [7, 8, 9, 10]) ➞ false
+
+function puzzlePieces(a1, a2) {
+    return a1.every((x, y) => x + a2[y] == a1[0] + a2[0] &&
+        a2.every((x, y) => x + a1[y] === a1[0] + a2[0]));
+}
+
+console.log(puzzlePieces([1, 2, 3, 4], [4, 3, 2, 1]))
