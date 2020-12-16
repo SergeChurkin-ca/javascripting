@@ -1,0 +1,14 @@
+// Create a function that calculates the number of different squares in an n * n square grid. 
+// numberSquares(2) ➞ 5
+// numberSquares(4) ➞ 30
+// numberSquares(5) ➞ 55
+
+function numberSquares(n) {
+    let calc = 0;
+    for (let i = n; i > 0; i--) {
+        calc += (i * i)
+    }
+    return calc
+}
+
+console.log(numberSquares(4))
