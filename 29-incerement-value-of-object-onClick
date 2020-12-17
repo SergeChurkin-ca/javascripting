@@ -17,6 +17,8 @@
     }
 */
 
+
+// this is the mask of processes happenning under the hood on commented code
 class UserCreator {
     constructor(name, score) {
         this.name = name;
