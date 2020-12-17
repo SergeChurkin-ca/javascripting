@@ -1,0 +1,47 @@
+// another solution with class - inderneath in line 20!
+// everything bind together in class
+/*
+    function UserCreator(name, score) {
+        this.name = name;
+        this.score = score
+    }
+
+    UserCreator.prototype.increment = function() {
+        // this.score++
+        const add1 = () => { this.score++ }
+        add1()
+
+    }
+    UserCreator.prototype.decrement = function() {
+        this.score--
+    }
+*/
+
+class UserCreator {
+    constructor(name, score) {
+        this.name = name;
+        this.score = score;
+    }
+    increment() {
+        this.score++
+    }
+    decrement() {
+        this.score--
+    }
+}
+
+const user1 = new UserCreator("Eva", 1)
+const user20 = new UserCreator("Bob", 33)
+
+function buttonClickPlus() {
+    user1.increment()
+    user20.increment()
+    console.log(user1.name, user1.score)
+    document.getElementById('demo').innerText = user1.name + ' ' + user1.score
+
+}
+
+function buttonClickMinus() {
+    user1.decrement()
+    document.getElementById('demo').innerText = user1.name + ' ' + user1.score + '\n' + user20.name + ' ' + user20.score
+}
