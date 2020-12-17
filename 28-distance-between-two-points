@@ -1,0 +1,18 @@
+// getDistance({x: -2, y: 1}, {x: 4, y: 3}) ➞ 6.325
+
+/* Formula :
+Distance between two points = √(xB−xA)2+(yB−yA)2
+
+Solution :
+Distance between two points = √(4−−2)2+(3−1)2
+= √62+22
+= √36+4
+= √40 = 6.3246
+Distance between points (-2, 1) and (4, 3) is 6.3246
+*/
+
+function getDistance(a, b) {
+    return Number(Math.sqrt(Math.pow((b.x - a.x), 2) + Math.pow((b.y - a.y), 2)).toFixed(3))
+}
+
+console.log(getDistance({ x: -2, y: 1 }, { x: 4, y: 3 }))
