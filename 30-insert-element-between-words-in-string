@@ -1,0 +1,15 @@
+/* 
+Test.assertSimilar(splitAndMerge("My name is John"," ") , "M y n a m e i s J o h n");
+Test.assertSimilar(splitAndMerge("My name is John","-") , "M-y n-a-m-e i-s J-o-h-n");
+Test.assertSimilar(splitAndMerge("Hello World!",".") , "H.e.l.l.o W.o.r.l.d.!");
+Test.assertSimilar(splitAndMerge("Hello World!",",") , "H,e,l,l,o W,o,r,l,d,!");
+*/
+
+
+function splitAndMerge(string, separator) {
+    return string.split(" ")
+        .map((x) => x.split("")
+            .join(separator)).join(" ")
+}
+
+console.log(splitAndMerge("My name is John", "-"))
