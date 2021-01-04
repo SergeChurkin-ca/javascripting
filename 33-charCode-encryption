@@ -1,0 +1,9 @@
+// "My name is John" => Jv kxjb fp Glek
+
+function topSecret(str) {
+    return str.replace(/[a-z]/gi, c => String.fromCharCode(c.charCodeAt(0) + (/[abc]/i.test(c) ? 23 : -3)))
+
+}
+
+
+console.log(topSecret("My name is John"))
