@@ -1,0 +1,14 @@
+let a = [13, 3, 3]
+let b = [3, 3, 3]
+
+function compareTriplets(a, b) {
+    let resultALice = 0,
+        resultBob = 0;
+    for (let i = 0; i < a.length; i++) {
+        a[i] > b[i] ? resultALice++ :
+            a[i] < b[i] ? resultBob++ : 'nothing'
+    }
+    // console.log(`ALice scores ${resultALice.split('.')}, Bob scores ${resultBob.split('.')}`)
+    return "score:" + [resultALice, resultBob]
+}
+console.log(compareTriplets(a, b))
