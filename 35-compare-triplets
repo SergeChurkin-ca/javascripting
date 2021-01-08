@@ -8,7 +8,7 @@ function compareTriplets(a, b) {
         a[i] > b[i] ? resultALice++ :
             a[i] < b[i] ? resultBob++ : 'nothing'
     }
-    // console.log(`ALice scores ${resultALice.split('.')}, Bob scores ${resultBob.split('.')}`)
+    
     return "score:" + [resultALice, resultBob]
 }
 console.log(compareTriplets(a, b))
