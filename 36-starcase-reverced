@@ -1,0 +1,20 @@
+// typcial staircase interview qeustion, but reverced
+// insted of
+// #
+// ##
+// ###
+// getting
+//    #
+//   ##
+//  ### ets.
+
+// use padStart - filling all the beginning given of arr number of times
+
+function staircase(n) {
+    for (let i = 1; i <= n; i++) {
+        console.log("#".repeat(i).padStart(n))
+    }
+}
+
+
+console.log(staircase(6))
