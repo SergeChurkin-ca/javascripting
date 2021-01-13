@@ -1,0 +1,31 @@
+// the principle here is when the element has winning value we are indexing and adding score one by one to an array
+
+function calculateScore(games) {
+    let scores = [0, 0]
+
+    for (i of games) {
+        if (i[0] === i[1]) continue
+        i.includes('R') && i.includes('P') ? scores[i.indexOf('P')] += 1 :
+            i.includes('R') && i.includes('S') ? scores[i.indexOf('R')] += 1 :
+            i.includes('P') && i.includes('S') ? scores[i.indexOf('S')] += 1 : 'error'
+
+    }
+    return scores[0] === scores['1'] ? 'Tie' :
+        scores[1] > scores[0] ? 'Benson' : 'Abigal'
+}
+
+console.log(calculateScore([
+    ['R', 'P'],
+    ['R', 'S'],
+    ['S', 'S']
+]))
+
+
+/*
+Test.assertEquals(calculateScore([['R', 'P'], ['R', 'S'], ['S', 'P']]),  "Abigail");
+Test.assertEquals(calculateScore([['R', 'R'], ['S', 'S']]), "Tie");
+Test.assertEquals(calculateScore([['S', 'R'], ['R', 'S'], ['R', 'R']]), "Tie");
+Test.assertEquals(calculateScore([['S', 'R'], ['P', 'R']]), "Tie");
+Test.assertEquals(calculateScore([['S', 'S'], ['S', 'P'], ['R', 'S'], ['S', 'R'], ['R', 'R']]), "Abigail");
+Test.assertEquals(calculateScore([['S', 'R'], ['S', 'R'], ['S', 'R'], ['R', 'S'], ['R', 'S']]), "Benson");
+*/
