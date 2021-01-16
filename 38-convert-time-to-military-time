@@ -1,0 +1,26 @@
+/*
+Sample Input 0
+07:05:45PM
+
+Sample Output 0
+19:05:45
+*/
+
+function timeConversion(s) {
+    const HR = s.slice(0, 2)
+    const MN = s.slice(3, 5)
+    const SEC = s.slice(6, 8)
+    const AMPM = s.slice(8, 11)
+
+    if (AMPM === 'PM' && HR !== '12') {
+        return `${parseInt(HR)+12}:${MN}:${SEC}`
+
+    } else if (AMPM === 'PM' && HR === '12') {
+        return `${parseInt(HR)}:${MN}:${SEC}`
+    } else if (AMPM === 'AM' && HR !== '12') {
+        return `0${parseInt(HR)}:${MN}:${SEC}`
+    } else if (AMPM === 'AM' && HR == '12') {
+        return `0${parseInt(HR)-12}:${MN}:${SEC}`
+    }
+}
+console.log(timeConversion('06:05:46AM'))
