@@ -1,0 +1,21 @@
+// get second largest number in given array
+/*
+Sample Input 0
+
+5
+2 3 6 6 5
+
+Sample Output 0
+
+5
+*/
+
+function getSecondLargest(nums) {
+    let secondLargest = 0
+    secondLargest = [...new Set(nums)].sort()
+    const largest = Math.max.apply(Math, secondLargest)
+    return secondLargest[secondLargest.indexOf(largest - 1)]
+
+}
+
+console.log(getSecondLargest([2, 3, 3, 6, 6, 5]))
