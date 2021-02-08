@@ -1,0 +1,36 @@
+/*
+javascriptloops  =>
+
+a
+a
+i
+o
+o
+j
+v
+s
+c
+r
+p
+t
+l
+p
+s
+*/
+
+// trivial solution 
+
+function vowelsAndConsonants(s) {
+    let vowels = ('aiou').split('');
+
+    for (let v of s) {
+        if (vowels.includes(v))
+            console.log(v)
+    }
+    for (let v of s) {
+        if (!vowels.includes(v))
+            console.log(v)
+    }
+}
+
+console.log(vowelsAndConsonants('javascriptloops'))
