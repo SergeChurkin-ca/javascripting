@@ -1,0 +1,40 @@
+/*
+initially llok like this:
+123
+456
+789
+
+after clockwise rotation looks like this:
+
+412
+753
+896
+
+*/
+
+// creating elements dynamically
+let body = document.getElementsByTagName('body')[0]
+let container = document.createElement('container')
+document.body.appendChild(container)
+container.setAttribute('id', 'container')
+
+// creating buttons
+for (let i = 1; i <= 9; i++) {
+    const btn = document.createElement('button')
+    btn.setAttribute('id', 'btn' + i)
+    btn.innerHTML = i;
+    container.appendChild(btn)
+}
+
+// specify the pattern of buttons by id and html value - the order of element immitaes clockwise direction
+// we manipulate with array to replace first and last elements
+
+let nums = [1, 2, 3, 6, 9, 8, 7, 4]
+let ids = [1, 2, 3, 6, 9, 8, 7, 4]
+
+btn5.onclick = function() {
+    nums.unshift(nums.pop());
+    for (i = 0; i <= 9; i++) {
+        document.getElementById("btn" + ids[i]).innerHTML = nums[i];
+    }
+}
